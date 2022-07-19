@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kmanupor <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ppoti <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/15 21:54:36 by kmanupor          #+#    #+#             */
-/*   Updated: 2022/07/15 22:07:26 by kmanupor         ###   ########.fr       */
+/*   Created: 2022/07/19 10:08:58 by ppoti             #+#    #+#             */
+/*   Updated: 2022/07/19 10:09:21 by ppoti            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+/*#include <unistd.h>
+#include <stdio.h>*/
 
 int	ft_strlen(char *str)
 {
@@ -25,8 +25,8 @@ int	ft_strlen(char *str)
 	}
 	return (i);
 }
-
+/*
 int	main(void)
 {
 	printf("%d", ft_strlen("Hello?"));
-}
+}*/

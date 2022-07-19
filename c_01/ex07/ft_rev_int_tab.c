@@ -1,5 +1,17 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ppoti <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/19 10:09:58 by ppoti             #+#    #+#             */
+/*   Updated: 2022/07/19 10:11:12 by ppoti            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*#include <unistd.h>
+#include <stdio.h>*/
 
 void	ft_rev_int_tab(int *tab, int size)
 {
@@ -7,7 +19,7 @@ void	ft_rev_int_tab(int *tab, int size)
 	int	temp;
 
 	i = 0;
-	while (i <= (size / 2)) 
+	while (i <= (size / 2))
 	{
 		temp = tab[i];
 		tab[i] = tab[size - i - 1];
@@ -16,11 +28,11 @@ void	ft_rev_int_tab(int *tab, int size)
 	}
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	tab[5] = {0, 1, 2, 3, 4};
 	int	size = 5;
 
 	ft_rev_int_tab(tab, size);
 	printf("%d, %d, %d, %d, %d", tab[0], tab[1], tab[2], tab[3], tab[4]);
-}
+}*/
