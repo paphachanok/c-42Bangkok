@@ -1,4 +1,16 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ppoti <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/19 14:40:57 by ppoti             #+#    #+#             */
+/*   Updated: 2022/07/19 14:43:02 by ppoti            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*#include <stdio.h>*/
 
 char	*ft_strlowcase(char *str)
 {
@@ -22,7 +34,7 @@ char	*ft_strlowcase(char *str)
 {
 	char	str[10] = "ADGUKLP";
 	char	str2[10] = "ADaajJJ";
-	char	str3[10] = "afgjPP";
+	char	str3[10] = "afgjPPZ";
 
 	printf("%s\n", ft_strlowcase(str));
 	printf("%s\n", ft_strlowcase(str2));

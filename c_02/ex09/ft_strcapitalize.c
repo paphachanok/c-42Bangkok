@@ -1,41 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppoti <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/19 14:39:04 by ppoti             #+#    #+#             */
-/*   Updated: 2022/07/19 14:40:36 by ppoti            ###   ########.fr       */
+/*   Created: 2022/07/19 14:43:51 by ppoti             #+#    #+#             */
+/*   Updated: 2022/07/20 15:19:52 by ppoti            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*#include <stdio.h>*/
 
-char	*ft_strupcase(char *str)
+char	*ft_strcapitalize(char *str)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (str[i] != '\0')
+	j = 0;
+	while (str[j] != '\0')
 	{
-		if (str[i] >= 97 && str[i] <= 122)
+		if (str[j] < '0' || (str[j] > '9' && str[j] < 'A')
+			|| (str[j] > 'Z' && str[j] < 'a') || str[j] > 'z')
+			i = 0;
+		else if (i == 0 && (str[j] >= 'a' && str[j] <= 'z'))
 		{
-			str[i] = str[i] - 32;
+			str[j] = str[j] - 32;
+			i++;
+		}
+		else if (i > 0 && (str[j] >= 'A' && str[j] <= 'Z'))
+		{
+			str[j] = str[j] + 32;
+			i++;
 		}
 		else
 			i++;
+		j++;
 	}
 	return (str);
 }
 
 /*int	main(void)
 {
-	char	str[10] = "aadfghjkz";
-	char	str2[10] = "SFGJLa";
-	char	str3[10] = "FhFjPl";
+	char	str[100] = "saluT, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
 
-	printf("%s\n", ft_strupcase(str));
-	printf("%s\n", ft_strupcase(str2));
-	printf("%s", ft_strupcase(str3));
+	printf("%s", ft_strcapitalize(str));
+
 }*/
