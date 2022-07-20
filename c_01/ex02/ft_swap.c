@@ -6,13 +6,13 @@
 /*   By: ppoti <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 09:59:10 by ppoti             #+#    #+#             */
-/*   Updated: 2022/07/19 09:59:33 by ppoti            ###   ########.fr       */
+/*   Updated: 2022/07/20 10:44:19 by ppoti            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*#include <stdio.h>*/
 
-void	swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
 	int	temp;
 
@@ -28,6 +28,6 @@ void	swap(int *a, int *b)
 
 	i = 3;
 	j = 1;
-	swap(&i, &j);
+	ft_swap(&i, &j);
 	printf("%d, %d", i, j);
 }*/
