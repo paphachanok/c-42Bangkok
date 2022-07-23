@@ -2,36 +2,22 @@
 
 int	ft_sqrt(int nb)
 {
-	int	rerm;
-	int job;
-	int klang;
-	int kum;
+	int	i;
 
-	rerm = 0;
-	job = nb;
-
-	while (rerm <= job)
+	i = 0;
+	while (i < nb)
 	{
-		klang = (rerm + job) / 2;
-		if (klang * klang == nb)
+		if (i * i != nb)
 		{
-			kum = klang;
-			return (kum);
+			i++;
 		}
-		else if (klang * klang > nb)
-		{
-			job = klang - 1;
-		}
-		else if (klang * klang < nb)
-		{
-			kum = rerm;
-			rerm = klang + 1;
-		}
+		else
+			return (i);
 	}
 	return (0);
 }
 
 int	main(void)
 {
-	printf("rak = %d\n", ft_sqrt(10000));
+	printf("rak = %d\n", ft_sqrt(-60));
 }
