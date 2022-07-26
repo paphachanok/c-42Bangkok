@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   fourandone.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: grobert <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: paphachanok_ <paphachanok_@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 07:38:22 by grobert           #+#    #+#             */
-/*   Updated: 2022/07/25 14:49:41 by ppoti            ###   ########.fr       */
+/*   Updated: 2022/07/25 18:28:33 by paphachanok      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	recursionfilling(int board[4][4], int *input);
+int		recursionfilling(int board[4][4], int *input);
 
 void	print_board(int board[4][4]);
 
