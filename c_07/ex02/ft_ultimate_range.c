@@ -1,48 +1,48 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ppoti <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/31 00:29:58 by ppoti             #+#    #+#             */
+/*   Updated: 2022/07/31 17:05:27 by ppoti            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
 
 int	ft_ultimate_range(int **range, int min, int max)
 {
-	int	j;
-	int	*v;
+	int	i;
+	int	*dest;
 
-	j = 0;
+	i = 0;
 	if (min >= max)
 	{
-		*range = NULL;
+		*range = 0;
 		return (0);
 	}
-	else if ((v = (int *)malloc(sizeof(int) * (max - min))) != NULL)
+	dest = (int *)malloc((max - min) * sizeof(int) + 1);
+	*range = dest;
+	if (!dest)
 	{
-		while (min < max)
-		{
-			v[j] = min;
-			min++;
-			j++;
-			*range = v;
-		}
-	}
-	if (v == NULL)
+		*range = 0;
 		return (-1);
-	return (j);
-}
-
-int	main(void)
-{
-	int i;
-	int	end;
-	int	*ans;
-
-	end = ft_ultimate_range(&ans, 30, 43);
-	i = 0;
-	if (end == -1 || end == 0)
-	{
-		printf("%d", end);
 	}
-	while (i < end)
+	while (i < (max - min))
 	{
-		printf("%d", ans[i]);
+		dest[i] = min + i;
 		i++;
 	}
+	dest[i] = '\0';
+	return (max - min);
 }
+
+/*int	main(void)
+{
+	int	*range;
+
+	printf("%d", ft_ultimate_range(&range, 2, 32));
+
+}*/
