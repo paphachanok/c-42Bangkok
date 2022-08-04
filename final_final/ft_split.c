@@ -6,7 +6,7 @@
 /*   By: ppoti <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 01:54:27 by ppoti             #+#    #+#             */
-/*   Updated: 2022/08/03 04:00:29 by ppoti            ###   ########.fr       */
+/*   Updated: 2022/08/04 22:44:38 by ppoti            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char	**ft_split(char *str)
 	{
 		while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 			i++;
-		if (i == 0 || (str[i] != '\0' && str[i - 1] == 32))
+		if (i == 0 || (str[i] != '\0' && str[i - 1] <= 32))
 		{
 			dest[j] = ft_a_word(str, i);
 			j++;
@@ -79,7 +79,7 @@ char	**ft_split(char *str)
 	return (dest);
 }
 
-/*int	main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int		index;
 	char	**split;
@@ -91,5 +91,5 @@ char	**ft_split(char *str)
 		printf("%s\n", split[index]);
 		index++;
 	}
-	printf("%d\n", index);
-}*/
+	//printf("%d\n", index);
+}
